@@ -28,6 +28,7 @@ x-op-app: &app
     - "${OPDATA:-opdata}:/var/openproject/assets"
 
 services:
+  # Intend to remove this as I will be using an external DB
   db:
     image: postgres:13
     <<: *restart_policy
